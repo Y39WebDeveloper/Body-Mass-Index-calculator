@@ -1,0 +1,280 @@
+@font-face {
+    font-family: Inter;
+    src: url("assets/fonts/Inter-VariableFont_slnt\,wght.ttf");
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Inter, sans-serif;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0px;
+    font-weight: 400;
+    color: #253347;
+}
+.container{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+}
+
+.hero{
+    padding: 32px 24px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 32px;
+}
+.hero::before{
+    content: "";
+    width: 100%;
+    height: 650px;
+    background-image: linear-gradient(90deg, #D6FCFE00, #D6E6FE);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    border-bottom-right-radius: 35px;
+    border-bottom-left-radius: 35px;
+}
+.hero .logo{
+    width: 40px;
+    height: 40px;
+}
+.hero .logo img{
+    width: 100%;
+    height: 100%;
+}
+
+.hero .content{
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    align-items: center;
+}
+.hero .content > .txt{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 24px;
+}
+.hero .content .txt h1{
+    font-size: 48px;
+    line-height: 110%;
+    letter-spacing: -2.4px;
+    font-weight: 600;
+    text-align: center;
+}
+.hero .content .txt p{
+    color: #5E6E85;
+    font-size: 16px;
+    line-height: 150%;
+    font-weight: 400;
+    text-align: center;
+}
+.hero .content .calculator{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 24px;
+    background-color: #fff;
+    border-radius: 16px;
+    box-shadow: 16px 32px 56px 0 #8fafd140;
+}
+
+.hero .content .calculator h3{
+    font-size: 24px;
+    line-height: 29px;
+    letter-spacing: -1.2px;
+    font-weight: 600;
+}
+.hero .content .calculator .unit{
+    display: flex;
+    align-items: center;
+    justify-content: stretch;
+    gap: 24px;
+}
+.hero .content .calculator .unit .radio{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 16px;
+}
+.hero .content .calculator .unit .radio input[type="radio"]{
+    position: absolute;
+    -webkit-appearance: none;
+    appearance: none;
+    opacity: 0;
+}
+.hero .content .calculator .unit .radio span{
+    width: 31px;
+    height: 31px;
+    border-radius: 50%;
+    border: 1px solid #253347;
+    transition: .3s;
+}
+.hero .content .calculator .unit .radio input[type="radio"]:checked + span{
+    width: 31px;
+    height: 31px;
+    background-color: #345FF6;
+    border: 8px solid #E1E7FE;
+}
+.hero .content .calculator .unit .radio label{
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0;
+    font-weight: 600;
+}
+.hero .content .calculator .data-inputs{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+}
+.hero .content .calculator .data-inputs .row{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+}
+.hero .content .calculator .data-inputs .row h6{
+    color: #5E6E85;
+    font-size: 14px;
+    line-height: 150%;
+    font-weight: 400;
+}
+.hero .content .calculator .data-inputs .row .inputs{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+.hero .content .calculator .data-inputs .row .inputs .input{
+    display: flex;
+    padding: 24px;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #5E6E85;
+    border-radius: 12px;
+    gap: 24px;
+    width: 100%;
+}
+.hero .content .calculator .data-inputs .row .inputs .input input[type="number"]{
+    outline: none;
+    border: none;
+    font-size: 24px;
+    line-height: 29px;
+    letter-spacing: -1.2px;
+    color: #253347;
+    width: 100%;
+}
+.hero .content .calculator .data-inputs .row .input span{
+    font-size: 24px;
+    line-height: 29px;
+    letter-spacing: -1.2px;
+    color: #345FF6;
+}
+.hero .content .calculator .result{
+    padding: 32px;
+    border-radius: 16px;
+    background-color: #345FF6;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    color: #fff;
+}
+.hero .content .calculator .result .bmi{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    font-weight: 600;
+}
+.hero .content .calculator .result .bmi span{
+    font-size: 48px;
+    line-height: 110%;
+    letter-spacing: -2.4px;
+}
+.hero .content .calculator .result .txt{
+    font-size: 14px;
+}
+.hero .content .calculator .result .txt span{
+    font-weight: 600;
+}
+
+
+
+@media (min-width : 576px) {
+    .hero{
+        padding: 32px 41px;
+        gap: 40px;
+    }
+    .hero .content{
+        gap: 40px;
+    }
+    .hero .content .calculator{
+        gap: 32px;
+    }
+    .hero .content .calculator .data-inputs{
+        gap: 32px;
+    }
+    .hero .content .calculator .result{
+        flex-direction: row;
+        border-top-right-radius: 200px;
+        border-bottom-right-radius: 200px;
+        align-items: center;
+    }
+    .hero .content .calculator .result .bmi{
+        width: 50%;
+    }
+    .hero .content .calculator .result .txt{
+        max-width: 50%;
+    }
+}
+@media (min-width : 768px) {
+    
+}
+@media (min-width : 992px) {
+    .hero{
+        align-items: flex-start;
+    }
+    .hero::before{
+        width: 75%;
+    }
+    .hero .logo{
+        width: 64px;
+        height: 64px;
+    }
+    .hero .content{
+        align-items: flex-start;
+        gap: 32px;
+        flex-direction: row;
+    }
+    .hero .content > .txt{
+        max-width: 50%;
+        align-items: flex-start;
+        gap: 32px;
+        margin-top: 72px;
+    }
+    .hero .content .txt h1{
+        text-align: left;
+        font-size: 64px;
+        line-height: 110%;
+        letter-spacing: -3.2px;
+    }
+    .hero .content .calculator .data-inputs{
+        gap: 24px;
+    }
+    .hero .content .txt p{
+        text-align: left;
+        font-size: 16px;
+        line-height: 150%;
+        letter-spacing: 0px;
+    }
+}
+@media (min-width : 1200px) {
+}

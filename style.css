@@ -206,8 +206,123 @@ body{
     font-weight: 600;
 }
 
-
-
+.description{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 48px;
+    margin: 32px 0 61px 0;
+}
+.description img{
+    width: 100%;
+}
+.description .txt{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+    padding: 0 23px;
+}
+.description .txt h3{
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 110%;
+    letter-spacing: -1.6px;
+}
+.description .txt p{
+    color: #5E6E85;
+}
+.tips{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+    padding: 48px 24px;
+    background-image: linear-gradient(90deg, #d6fcfe00, #D6E6FE55);
+}
+.tips .tip{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+}
+.tips .tip .icon{
+    width: 64px;
+    height: 64px;
+}
+.tips .tip .icon img{
+    width: 64px;
+    height: 64px;
+}
+.tips .tip .txt{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 24px;
+}
+.tips .tip .txt h4{
+    font-size: 24px;
+    line-height: 29px;
+    letter-spacing: -1.2px;
+    font-weight: 600;
+}
+.tips .tip .txt p{
+    color: #5E6E85;
+}
+.limitation{
+    padding: 82px 19px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+}
+.limitation .txt{
+    text-align: center;
+    margin-bottom: 56px;
+}
+.limitation .txt h3{
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 110%;
+    letter-spacing: -1.6px;
+    margin-bottom: 32px;
+}
+.limitation .txt p{
+    color: #5E6E85;
+}
+.limitation .card{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 17px;
+    background-color: #FFF;
+    box-shadow: 16px 32px 56px 0 #90afd040;
+    border-radius: 16px;
+    padding: 24px;
+}
+.limitation .card .head{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 16px;
+}
+.limitation .card .head .icon{
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.limitation .card .head .icon img{}
+.limitation .card .head h4{
+    font-size: 20px;
+    line-height: 150%;
+    font-weight: 600;
+    letter-spacing: -1px;
+}
+.limitation .card .body p{
+    color: #5E6E85;
+}
 @media (min-width : 576px) {
     .hero{
         padding: 32px 41px;
@@ -234,9 +349,47 @@ body{
     .hero .content .calculator .result .txt{
         max-width: 50%;
     }
+    .description img{
+        padding: 0  24px;
+    }
+    .tips .tip{
+        flex-direction: row;
+        align-items: center;
+        gap: 40px;
+    }
 }
 @media (min-width : 768px) {
-    
+    .description{
+        padding: 0 46px;
+        flex-direction: row;
+        position: relative;
+        overflow: hidden;
+        gap: 0;
+    }
+    .description img{
+        height: 411px;
+        width: 360px;
+        transform: translate(-84px);
+        padding: 0 0;
+    }
+    .description .txt{
+        min-width: 311px;
+        padding: 0 0;
+    }
+    .limitation{
+        padding: 82px 40px;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+    }
+    .limitation .txt{
+        grid-column: span 12;
+    }
+    .limitation .card{
+        grid-column: span 6;
+    }
+    .limitation .card:last-child:nth-child(2n){
+        grid-column-end: -4;
+    }
 }
 @media (min-width : 992px) {
     .hero{
@@ -275,6 +428,68 @@ body{
         line-height: 150%;
         letter-spacing: 0px;
     }
+    .description{
+        justify-content: space-between;
+        gap: 20px;
+    }
+    .description img{
+        transform: none;
+    }
+    .description .txt {
+        width: 465px;
+    }
+    .description .txt h3{
+        letter-spacing: -2.4px;
+        line-height: 110%;
+        font-size: 48px;
+    }
+    .tips{
+        padding: 50px 39px;
+    }
+    .limitation{
+
+    }
+    .tips{
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 48px;
+    }
 }
 @media (min-width : 1200px) {
+    .container{
+        padding: 0 50px;
+    }
+    .description img{
+        transform: none;
+        width: 564px;
+        height: 533px;
+    }
+    .description .txt{
+        transform: translateY(50px);
+    }
+    .tips{
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 48px;
+    }
+    .tips .tip{
+        flex-direction: column;
+        align-items: start;
+        gap: 40px;
+    }
+    .limitation .txt{
+        grid-column: span 6;
+    }
+    .limitation .card{
+        grid-column: span 4;
+    }
+    .limitation .card:nth-child(2){
+        grid-column-end: -2;
+    }
+    .limitation .card:nth-child(3){
+        grid-column: 5 / span 4;
+    }
+    .limitation .card:nth-child(5){
+        grid-column: 2 / span 4;
+    }
 }

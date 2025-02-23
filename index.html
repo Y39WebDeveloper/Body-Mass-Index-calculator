@@ -44,16 +44,38 @@
               </div>
             </div>
 
-            <div class="data-inputs">
+            <div class="data-inputs metric">
               <div class="row">
                 <h6>Height</h6>
                 <div class="inputs">
                   <div class="input">
-                    <input type="number" placeholder="0">
+                    <input type="number" placeholder="0" id="cm">
+                    <span>cm</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <h6>Weight</h6>
+                <div class="inputs">
+                  <div class="input">
+                    <input type="number" placeholder="0" id="kg">
+                    <span>kg</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="data-inputs imperial">
+              <div class="row">
+                <h6>Height</h6>
+                <div class="inputs">
+                  <div class="input">
+                    <input type="number" placeholder="0" id="ft">
                     <span>ft</span>
                   </div>
                   <div class="input">
-                    <input type="number" placeholder="0">
+                    <input type="number" placeholder="0" id="in">
                     <span>in</span>
                   </div>
                 </div>
@@ -63,11 +85,11 @@
                 <h6>Weight</h6>
                 <div class="inputs">
                   <div class="input">
-                    <input type="number" placeholder="0">
+                    <input type="number" placeholder="0" id="st">
                     <span>st</span>
                   </div>
                   <div class="input">
-                    <input type="number" placeholder="0">
+                    <input type="number" placeholder="0" id="ibs">
                     <span>ibs</span>
                   </div>
                 </div>
@@ -77,9 +99,9 @@
             <div class="result">
               <div class="bmi">
                 Your BMI is...
-                <span>22.0</span>
+                <span id="result">0</span>
               </div>
-              <div class="txt">
+              <div class="txt" id="resultTxt">
                 Your BMI suggests you’re a healthy weight. Your ideal weight is between <span>9st 6lbs - 12st 10lbs.</span>
               </div>
             </div>

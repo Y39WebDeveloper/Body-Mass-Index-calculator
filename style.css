@@ -122,6 +122,18 @@ body{
     background-color: #345FF6;
     border: 8px solid #E1E7FE;
 }
+.hero .content .calculator:has(#metric:checked) .metric{
+    display: flex;
+}
+.hero .content .calculator:has(#metric:checked) .imperial{
+    display: none;
+}
+.hero .content .calculator:has(#imperial:checked) .metric{
+    display: none;
+}
+.hero .content .calculator:has(#imperial:checked) .imperial{
+    display: flex;
+}
 .hero .content .calculator .unit .radio label{
     font-size: 16px;
     line-height: 150%;
@@ -161,6 +173,11 @@ body{
     border-radius: 12px;
     gap: 24px;
     width: 100%;
+    cursor: pointer;
+}
+.hero .content .calculator .data-inputs .row .inputs .input:hover,
+.hero .content .calculator .data-inputs .row .inputs .input:has(input[type="number"]:focus){
+    border-color: #345FF6;
 }
 .hero .content .calculator .data-inputs .row .inputs .input input[type="number"]{
     outline: none;
